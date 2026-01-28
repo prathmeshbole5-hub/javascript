@@ -14,7 +14,6 @@ const y ={
             firstname : "prathmesh",
             lastname: "BOLE"
         }
-
     }
 }
 

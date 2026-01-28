@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week Days DOM Example</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+        }
+        .day {
+            padding: 5px;
+            background-color: #f0f0f0;
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Parent div -->
+    <div id="week" class="container">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+
+    <script>
+        // Select parent element
+        const weekDiv = document.getElementById("week");
+
+        // Access children
+        const days = weekDiv.children;
+
+        console.log("Parent Element:", weekDiv);
+        console.log("Children Elements:", days);
+
+        // Loop through children and modify them
+        for (let i = 0; i < days.length; i++) {
+            days[i].style.color = "blue";
+        }
+
+        // Access parent from a child
+        const firstDay = days[0];
+        console.log("First Day:", firstDay);
+        console.log("Parent of First Day:", firstDay.parentElement);
+
+        // Example: change parent background
+        firstDay.parentElement.style.backgroundColor = "#e6ffe6";
+    </script>
+
+</body>
+</html>
